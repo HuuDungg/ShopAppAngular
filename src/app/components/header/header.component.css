@@ -1,0 +1,33 @@
+/* Custom CSS for navbar and footer */
+.navbar-brand {
+    font-weight: bold;
+    color: #fff; /* White color */
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #f8f9fa; /* Light grey color */
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: #fff; /* White color */
+}
+
+.form-control,
+.form-select {
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Màu nền xanh dương */
+    border-color: #007bff; /* Màu viền nút */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Màu nền xanh dương đậm khi di chuột qua */
+    border-color: #0056b3; /* Màu viền nút khi di chuột qua */
+}

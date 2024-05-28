@@ -1,0 +1,13 @@
+.footer {
+    background-color: #343a40; /* Dark grey color */
+    color: #f8f9fa; /* Light grey color */
+    padding: 30px 0;
+}
+
+.footer a {
+    color: #f8f9fa; /* Light grey color */
+}
+
+.footer a:hover {
+    color: #fff; /* White color */
+}

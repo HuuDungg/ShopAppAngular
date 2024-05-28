@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/src/app/components/header/header.component.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">HuuDung</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category"><i class="bi bi-house"></i> Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-bell"></i> Thông báo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-cart"></i> Giỏ hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login"><i class="bi bi-person"></i> Đăng nhập</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input #myInfor type="text"  class="form-control me-2" type="text" placeholder="Search...">
+                
+                <select #mySelect class="form-select me-2">
+                    <option ></option>
+                </select>
+                
+                <button  class="btn btn-primary" type="submit" style="border-radius: 40px;">
+                    <i class="bi bi-search">Search</i> 
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>

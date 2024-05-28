@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/src/app/components/order/order.component.css">
+
+<div class="container mt-4 checkout-container">
+    <div class="row">
+        
+        <div class="col-lg-12">
+            <div class="checkout-summary">
+                <h2>Đơn hàng của bạn</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ảnh sản phẩm</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Giảm</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Tăng</th>
+                            <th scope="col">Đơn giá</th>
+                            <th scope="col">Thành tiền</th>
+                            <th scope="col">Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://i.pinimg.com/564x/b0/4f/ec/b04fec6e9040cc247aa3d0be1c324d7e.jpg" alt="Product Image" style="max-width: 100px;"></td>
+                            <td>12</td>
+                            <td>
+                                <button class="btn-quantity">-</button>
+                            </td>
+                            <td>            
+                                453    
+                            </td> 
+                            <td>
+                                <button class="btn-quantity">+</button>
+                            </td>
+                            <td>345543vnd</td>
+                            <td>45345</td>
+                            <td><button class="btn btn-primary">Xóa</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Tổng cộng:</td>
+                            <td>4534534vnd</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="mb-3 promo-code">
+                    <label for="promoCode" class="form-label">Mã giảm giá</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="promoCode" placeholder="Nhập mã giảm giá">
+                        <button class="btn btn-primary" type="button">Áp dụng</button>
+                    </div>
+                </div>
+                <button style="margin: 10px ;" routerLink="/checkOut" class="btn btn-success checkout-submit">Xác nhận</button>
+            </div>
+           
+        </div>   
+    </div>
+</div>

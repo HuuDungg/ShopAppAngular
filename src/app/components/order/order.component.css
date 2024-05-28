@@ -1,0 +1,65 @@
+/* Custom Checkout CSS */
+.checkout-container {
+    padding-top: 50px;
+}
+
+.checkout-form, .checkout-summary {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px;
+}
+
+.checkout-summary table {
+    background-color: #fff;
+    width: 100%;
+}
+
+.checkout-summary th, .checkout-summary td {
+    padding: 8px;
+    text-align: center;
+}
+
+.checkout-summary thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.checkout-summary tfoot {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.promo-code {
+    display: flex;
+    align-items: center;
+}
+
+.promo-code button {
+    margin-left: 10px;
+}
+
+.checkout-submit {
+    margin-top: 20px;
+    float: right;
+}
+
+.row {
+    margin: 50px 0px;
+}
+
+/* Button for Quantity */
+.btn-quantity {
+    background-color: #f1f1f1;  /* Gray background */
+    border: none;
+    color: black;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-quantity:hover {
+    background-color: #ddd;  /* Darker gray background on hover */
+}
+

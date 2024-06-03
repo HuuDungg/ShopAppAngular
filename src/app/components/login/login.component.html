@@ -18,15 +18,19 @@
         <form>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email">
+                <input type="text" class="form-control" id="email" placeholder="Nhập địa chỉ email"
+                
+                >
             </div>
             <div class="form-group">
                 <label for="password">Mật khẩu</label>
                 <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
             </div>
             <div class="form-group forgot-password">
-                <label for="">Choose your role</label>
-                <select class="form-select" aria-label="Default select example">
+                <label class="lable-Role" for="">Choose your role</label>
+                <select class="form-select" aria-label="Default select example" 
+                    ß
+                    >
                     <option selected disabled>Chọn vai trò của bạn</option>
                     <option *ngFor="let role of listRole">{{role.name}}</option>
                 </select>
@@ -37,7 +41,7 @@
             </div>
         </form>
         <div class="register-link">
-            <p>Chưa có tài khoản? <a routerLink="/register">Đăng ký ngay</a></p>
+            <p>Chưa có tài khoản? <a routerLink="/signUp">Đăng ký ngay</a></p>
         </div>
     </div>
 

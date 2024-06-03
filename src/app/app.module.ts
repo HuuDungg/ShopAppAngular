@@ -14,6 +14,7 @@ import { ComfirmOrderComponent } from './components/comfirm-order/comfirm-order.
 import { Router, RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     RouterOutlet,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [MainAppComponent]

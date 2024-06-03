@@ -8,6 +8,7 @@ import { Role } from '../../common/role';
 })
 export class LoginComponent implements OnInit{
   listRole!: Role[];
+  private roleForYou!: String;
   constructor(
     private roleService: RoleServiceService
   ){}

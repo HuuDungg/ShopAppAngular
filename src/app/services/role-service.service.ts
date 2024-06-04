@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Role } from '../common/role';
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoleServiceService {
-  private baseApi = "http://localhost:8080/api/v1/roles/getAllRoles";
+  private baseApi = `${environment.baseUrl}/roles/getAllRoles`;
 
   constructor(private http: HttpClient) { }
 

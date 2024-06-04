@@ -3,17 +3,30 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RegisterDTO } from '../common/register-dto';
+import { LoginDTO } from '../common/login-dto';
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-  private baseUrl = 'http://localhost:8080/api/v1/user/register';
+  private registerUrl = `${environment.baseUrl}/user/register`;
+  private loginUrl = `${environment.baseUrl}/user/login`;
+  private apiConfig = {
+    headers: this.createHeaders()
+  }
+
   constructor(private http: HttpClient) { }
 
   register(register: RegisterDTO):Observable<any>{
-     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+     return this.http.post(this.registerUrl, register,this.apiConfig)
+  }
 
-     return this.http.post(this.baseUrl, register,{headers, responseType: 'text'})
+  login(LoginDTO: LoginDTO):Observable<any>{
+      return this.http.post(this.loginUrl, LoginDTO, this.apiConfig)
+  }
+
+  private createHeaders(): HttpHeaders{
+    return new HttpHeaders({ 'Content-Type': 'application/json' });
   }
 }

@@ -13,8 +13,9 @@ import { OrderComponent } from './components/order/order.component';
 import { ComfirmOrderComponent } from './components/comfirm-order/comfirm-order.component';
 import { Router, RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TokenInterceptor } from './inerceptor/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,13 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [MainAppComponent]
 })
 export class AppModule { }

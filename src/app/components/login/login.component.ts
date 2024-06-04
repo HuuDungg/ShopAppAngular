@@ -3,6 +3,8 @@ import { RoleServiceService } from '../../services/role-service.service';
 import { Role } from '../../common/role';
 import { UserServiceService } from '../../services/user-service.service';
 import { LoginDTO } from '../../common/login-dto';
+import { LoginResponse } from '../../responses/login-response';
+import { TokenServiceService } from '../../services/token-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,14 +12,15 @@ import { LoginDTO } from '../../common/login-dto';
 })
 export class LoginComponent implements OnInit{
   listRole!: Role[];
-  phone_number:String = "";
-  password:String = "";
-  roleForYou!: String;
+  phone_number:string = "";
+  password:string = "";
+  roleForYou!: string;
   loginDTO: LoginDTO = new LoginDTO("", "");
 
   constructor(
     private roleService: RoleServiceService,
-    private userSerice: UserServiceService
+    private userSerice: UserServiceService,
+    private tokenService: TokenServiceService
   ){}
 
   ngOnInit(): void {
@@ -35,8 +38,9 @@ export class LoginComponent implements OnInit{
       this.loginDTO.password = this.password
 
       this.userSerice.login(this.loginDTO).subscribe({
-        next: (response: any) => {
-          
+        next: (response: LoginResponse) => {
+          const {token} = response
+          this.tokenService.setToken(token)
         },
         complete: () => {
           // Xử lý logic sau khi hoàn thành (nếu cần)

@@ -28,11 +28,10 @@
             </div>
             <div class="form-group forgot-password">
                 <label class="lable-Role" for="">Choose your role</label>
-                <select class="form-select" aria-label="Default select example" 
-                    ß
+                <select class="form-select" aria-label="Default select example"
                     >
                     <option selected disabled>Chọn vai trò của bạn</option>
-                    <option *ngFor="let role of listRole">{{role.name}}</option>
+                    <option *ngFor="let role of listRole">{{role.name.toUpperCase()}}</option>
                 </select>
                 <a href="#">Quên mật khẩu?</a>
             </div>

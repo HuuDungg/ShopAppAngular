@@ -6,7 +6,7 @@ import { Role } from '../common/role';
   providedIn: 'root'
 })
 export class RoleServiceService {
-  private baseApi = "http://localhost:8080/api/v1/role/getAllRoles";
+  private baseApi = "http://localhost:8080/api/v1/roles/getAllRoles";
 
   constructor(private http: HttpClient) { }
 

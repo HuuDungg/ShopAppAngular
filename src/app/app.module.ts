@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TokenInterceptor } from './inerceptor/token.interceptor';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TokenInterceptor } from './inerceptor/token.interceptor';
     SignUpComponent,
     DetailProductComponent,
     OrderComponent,
-    ComfirmOrderComponent
+    ComfirmOrderComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

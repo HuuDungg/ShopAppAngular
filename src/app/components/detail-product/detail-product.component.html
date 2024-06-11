@@ -1,28 +1,48 @@
-<link rel="stylesheet" href="/src/app/components/detail-product/detail-product.component.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/app/components/detail-product/detail-product.component.css">
+    <title>Product Detail</title>
+</head>
 <body>
     <div class="container">
         <div class="row">
             <!-- Left side: Product Images -->
             <div class="col-lg-6">
                 <div class="product-images">
-                    <img src="https://i.pinimg.com/564x/b0/4f/ec/b04fec6e9040cc247aa3d0be1c324d7e.jpg" alt="Product Image" class="img-fluid rounded shadow">
-                    <!-- Add more images here -->
+                    <img src="{{product.thumbnail}}" alt="Product Image" class="img-fluid rounded shadow">
+                    <!-- Additional images can be added here -->
                 </div>
             </div>
             <!-- Right side: Product Information -->
             <div class="col-lg-6">
                 <div class="product-info">
-                    <h2 class="fw-bold">Baby cute</h2>
-                    <p class="lead">very yamy</p>
-                    <p class="fw-bold">Price: 100000</p>
-                    <p class="fw-bold">In-Strock: 45345</p>
+                    <h2 class="fw-bold">{{product.name}}</h2>
+                    <p class="product-description">{{product.description}}</p>
+                    <p class="product-price">Price: ${{product.price}}</p>
+                    
+                    <div class="size-options">
+                        <button class="size-option">S</button>
+                        <button class="size-option">M</button>
+                        <button class="size-option">L</button>
+                        <button class="size-option">XL</button>
+                    </div>
+                    
+                    <div class="quantity-input">
+                        <button class="decrement">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="increment">+</button>
+                    </div>
                 </div>
 
                 <div class="action-buttons">
-                    <button class="btn btn-success rounded-pill buy">Buy</button>
-                    <button  class="btn btn-primary rounded-pill add-to-cart">Add to Cart</button>
+                    <button class="btn btn-success buy">Buy Now</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+</html>

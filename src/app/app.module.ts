@@ -17,6 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TokenInterceptor } from './inerceptor/token.interceptor';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { NgbPagination } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     RouterOutlet,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbPagination
   ],
   providers: [
     {

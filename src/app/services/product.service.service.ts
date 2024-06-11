@@ -9,6 +9,7 @@ import { Product } from '../common/product';
 })
 export class ProductServiceService {
 
+  private getProductByIdUrl = `${environment.baseUrl}/products/`
   private getProductUrl = `${environment.baseUrl}/products/getAllProduct`
 
   constructor(private http: HttpClient) { }
@@ -19,4 +20,9 @@ export class ProductServiceService {
           .set("limit", limit.toString())
       return this.http.get<Product[]>(this.getProductUrl,{params})
   }
+
+  findById(id:number):Observable<Product>{
+    return this.http.get<Product>(this.getProductByIdUrl + id)
+  }
+
 }

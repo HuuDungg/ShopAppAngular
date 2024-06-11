@@ -1,0 +1,21 @@
+.card-text.description {
+    display: inline-block;
+    width: 20ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover; /* Đảm bảo hình ảnh sẽ bao phủ toàn bộ khung mà không bị méo */
+}
+
+
+.btn-primary {
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.card {
+    width: 100%; /* Ensure cards are responsive */
+}

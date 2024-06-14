@@ -31,15 +31,15 @@
                     </div>
                     
                     <div class="quantity-input">
-                        <button class="decrement">-</button>
-                        <input type="number" value="1" min="1">
-                        <button class="increment">+</button>
+                        <button (click)="decreaseCart()" class="decrement">-</button>
+                        <input type="number" value="{{quantity}}" min="1">
+                        <button (click)="increaseCart()" class="increment">+</button>
                     </div>
                 </div>
 
                 <div class="action-buttons">
                     <button class="btn btn-success buy">Buy Now</button>
-                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart" (click)="addToCart()">Add to Cart</button>
                 </div>
             </div>
         </div>

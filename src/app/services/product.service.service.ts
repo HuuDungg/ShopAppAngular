@@ -11,7 +11,6 @@ export class ProductServiceService {
 
   private getProductByIdUrl = `${environment.baseUrl}/products/`
   private getProductUrl = `${environment.baseUrl}/products/getAllProduct`
-
   constructor(private http: HttpClient) { }
 
   getAllProduct(page:number, limit:number):Observable<Product[]>{
@@ -25,4 +24,9 @@ export class ProductServiceService {
     return this.http.get<Product>(this.getProductByIdUrl + id)
   }
 
+  getProductByIds(productIds: number[]):Observable<Product[]>{
+    const params = new HttpParams().set('ids', productIds.join(','));
+    return this.http.get<Product[]>(`${this.getProductByIdUrl}by-ids`, {params})
+  }
+    
 }

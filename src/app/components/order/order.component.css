@@ -63,3 +63,7 @@
     background-color: #ddd;  /* Darker gray background on hover */
 }
 
+.card-img-top {
+    height: 90px;
+    object-fit: cover; /* Đảm bảo hình ảnh sẽ bao phủ toàn bộ khung mà không bị méo */
+}

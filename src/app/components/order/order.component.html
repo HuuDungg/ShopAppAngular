@@ -20,19 +20,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="https://i.pinimg.com/564x/b0/4f/ec/b04fec6e9040cc247aa3d0be1c324d7e.jpg" alt="Product Image" style="max-width: 100px;"></td>
-                            <td>12</td>
+                        <tr *ngFor="let l of cartItems">
+                            <td><img class="card-img-top" src="{{l.product.thumbnail}}" alt="Product Image" style="max-width: 100px;"></td>
+                            <td>{{l.product.name}}</td>
                             <td>
-                                <button class="btn-quantity">-</button>
+                                <button (click)="decreaseProduct(l.product.id)" class="btn-quantity">-</button>
                             </td>
                             <td>            
-                                453    
+                                {{l.quantity}}
                             </td> 
                             <td>
-                                <button class="btn-quantity">+</button>
+                                <button (click)="increaseProduct(l.product.id)" class="btn-quantity">+</button>
                             </td>
-                            <td>345543vnd</td>
+                            <td>{{l.product.price}}</td>
                             <td>45345</td>
                             <td><button class="btn btn-primary">Xóa</button></td>
                         </tr>
